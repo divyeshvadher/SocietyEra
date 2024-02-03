@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>SocietyEra</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous"/>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,800;0,900;1,700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inria Serif:wght@400;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inria Sans:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inder:wght@400&display=swap"
+    />
+
+    <style>
+      body {
+        margin: 0;
+        line-height: normal;
+      }
+      #openModalBtn {
+        background-color: gray;
+        color: white;
+        padding: 10px 60px;
+        font-size: 1.2rem;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+    
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: gray;
+      }
+    
+      .modal-content {
+        background-color: white;
+        margin: 15% auto;
+        width: 400px;
+        padding: 5px;
+        border-radius: 50px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        text-align: center;
+      }
+    
+      .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+      }
+    
+      .close:hover,
+      .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    
+      #recruiterBtn,
+      #studentBtn {
+        background-color: white;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        margin: 10px;
+        border-radius: 55px;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      style="
+        position: relative;
+        background-color: #e0e1dd;
+        width: 100%;
+        height: 337.88rem;
+        overflow: hidden;
+        text-align: left;
+        font-size: 2rem;
+        color: #000;
+        font-family: Inter;
+      "
+    >
+      <div
+        style="
+          position: absolute;
+          top: 5.31rem;
+          left: 3.19rem;
+          font-size: 6.25rem;
+          font-weight: 800;
+          display: inline-block;
+          width: 38.5rem;
+          height: 13rem;
+        "
+      >
+        SocietyEra
+      </div>
+      <img
+        style="
+          position: absolute;
+          top: 17.63rem;
+          left: 2.06rem;
+          border-radius: 50px;
+          width: 90.89rem;
+          height: 40.75rem;
+          object-fit: cover;
+        "
+        alt=""
+        src="./static/soc.jpg"
+      />
+
+      <i
+        style="
+          position: absolute;
+          top: 62.75rem;
+          left: 1.69rem;
+          font-size: 4.38rem;
+          display: inline-block;
+          font-weight: 700;
+          width: 83.25rem;
+          height: 7.56rem;
+        "
+        >Exploration of Our Motive</i>
+      <div
+        style="
+          position: absolute;
+          text-align: justify;
+          top: 74.06rem;
+          left: 1.60rem;
+          display: inline-block;
+          width: 88.88rem;
+          height: 27.19rem;
+        "
+      >
+        <p style="margin: 0">
+            At SocietyEra, our motive is deeply rooted in the vision of transforming the traditional approach to community living. We embark on this exploration with a keen awareness of the challenges faced by societies in efficiently managing their affairs. Financial management is simplified, providing residents with a transparent view of community expenses and empowering administrators with efficient tools for financial oversight.
+        </p>
+        <p style="margin: 0">&nbsp;</p>
+        <p style="margin: 0">
+            We understand the importance of clear communication, and SocietyEra is designed to be a platform that facilitates seamless interaction among residents, administrators, and maintenance staff. We invite you to join us on this exploration of a new era, where technology and community converge to elevate living standards and foster a sense of belonging.
+        </p>
+        <p style="margin: 0">&nbsp;</p>
+        <p style="margin: 0">
+            Financial management is simplified, providing residents with a transparent view of community expenses and empowering administrators with efficient tools for financial oversight. This exploration is driven by a commitment to create a dynamic and interconnected community where each member plays a significant role in shaping the collective experience.
+        </p>
+      </div>
+      <div
+        style="
+          position: absolute;
+          top: 119.5rem;
+          left: 3.44rem;
+          background-color: #d4d5cf;
+          width: 21.63rem;
+          height: 18.38rem;
+        "
+      ></div>
+      <div
+        style="
+          position: absolute;
+          top: 119.5rem;
+          left: 32.75rem;
+          background-color: #d4d5cf;
+          width: 21.63rem;
+          height: 18.38rem;
+        "
+      ></div>
+      <div
+        style="
+          position: absolute;
+          top: 119.5rem;
+          left: 62.06rem;
+          background-color: #d4d5cf;
+          width: 21.63rem;
+          height: 18.38rem;
+        "
+      ></div>
+      <div
+        style="
+          position: absolute;
+          top: 125.94rem;
+          left: 4.81rem;
+          text-align: center;
+          display: inline-block;
+          width: 18.88rem;
+          height: 14.69rem;
+        "
+      >
+        <p style="margin: 0; font-weight: 900">100+</p>
+        <p style="margin: 0">Societies</p>
+      </div>
+      <div
+        style="
+          position: absolute;
+          top: 125.94rem;
+          left: 34.13rem;
+          text-align: center;
+          display: inline-block;
+          width: 18.88rem;
+          height: 14.69rem;
+        "
+      >
+        <p style="margin: 0; font-weight: 900">90%</p>
+        <p style="margin: 0">Success Rate</p>
+      </div>
+      <div
+        style="
+          position: absolute;
+          top: 125.94rem;
+          left: 63.44rem;
+          text-align: center;
+          display: inline-block;
+          width: 18.88rem;
+          height: 14.69rem;
+        "
+      >
+        <p style="margin: 0; font-weight: 900">70%</p>
+        <p style="margin: 0">Performance Impact</p>
+      </div>
+      <img
+        style="
+          position: absolute;
+          top: 147.38rem;
+          left: 3.44rem;
+          border-radius: 50px;
+          width: 36.94rem;
+          height: 37.06rem;
+          object-fit: cover;
+        "
+        alt=""
+        src="./static/comm.jpg"
+      />
+
+      <div
+        style="
+          position: absolute;
+          top: 148.63rem;
+          left: 41.94rem;
+          display: inline-block;
+          width: 45.63rem;
+          height: 31.81rem;
+          font-size: 2.5rem;
+          font-family: 'Inria Serif';
+        "
+      >
+        <p style="margin: 0">
+          <b>Learn, How SocietyEra helps to build community?</b>
+        </p>
+        <p style="margin: 0">
+          <b>&nbsp;</b>
+        </p>
+        <p style="margin: 0">
+          <b></b>
+        </p>
+        <p style="margin: 0; font-size: 2.25rem; text-align: justify;">
+            SocietyEra facilitates community building by fostering transparent communication, encouraging active resident participation, and promoting shared responsibilities through its advanced features. Residents learn to connect, collaborate, and contribute to the well-being of their community, cultivating a sense of unity and shared ownership.
+        </p>
+      </div>
+      <img
+        style="
+          position: absolute;
+          top: 190.88rem;
+          left: 45rem;
+          width: 42rem;
+          height: 43.44rem;
+          object-fit: cover;
+        "
+        alt=""
+        src="./static/potential.webp"
+      />
+
+      <div
+        style="
+          position: absolute;
+          top: 203.75rem;
+          left: 3.44rem;
+          display: inline-block;
+          width: 34.13rem;
+          height: 20.44rem;
+          font-size: 2.5rem;
+          font-family: 'Inria Serif';
+        "
+      >
+        <p style="margin: 0">
+          <b>Unlock the Hidden Potential of Your Society with SocietyEra</b>
+        </p>
+        <p style="margin: 0">
+          <b>&nbsp;</b>
+        </p>
+        <p style="margin: 0; font-size: 2.25rem">
+          Seamlessly integrate communication, financial transparency, and collaboration. 
+        </p>
+      </div>
+      <b
+        style="
+          position: absolute;
+          top: 270.75rem;
+          left: 2.44rem;
+          font-size: 3rem;
+          display: inline-block;
+          font-family: Inconsolata;
+          width: 82.81rem;
+          height: 5.69rem;
+        "
+        >Frequently Asked Questions</b
+      >
+      <div
+        style="
+          position: absolute;
+          top: 278.31rem;
+          left: 2.75rem;
+          font-size: 2.25rem;
+          font-family: Inconsolata;
+          display: inline-block;
+          width: 41.25rem;
+          height: 9.88rem;
+        "
+      >
+        <p style="margin: 0">How does SocietyEra enhance communication within the community?</p>
+        <p style="margin: 0">&nbsp;</p>
+        <p style="margin: 0; text-align: justify;">
+            SocietyEra offers a centralized communication platform, allowing residents to send private messages and engage in group discussions effortlessly. 
+        </p>
+      </div>
+      <div
+        style="
+          position: absolute;
+          top: 278.19rem;
+          left: 45.25rem;
+          font-size: 2.25rem;
+          font-family: Inconsolata;
+          display: inline-block;
+          width: 42.31rem;
+          height: 17.69rem;
+        "
+      >
+        <p style="margin: 0">How does SocietyEra ensure the security of user data and transactions?</p>
+        <p style="margin: 0">&nbsp;</p>
+        <p style="margin: 0; text-align: justify;">
+          SocietyEra prioritizes the security and privacy of user data. All sensitive information, including financial transactions, is encrypted during storage and transmission.
+        </p>
+      </div>
+      <b
+        style="
+          position: absolute;
+          top: 304.75rem;
+          left: 29.63rem;
+          font-size: 4rem;
+          display: inline-block;
+          font-family: 'Inria Serif';
+          text-align: center;
+          width: 28.38rem;
+          height: 4.19rem;
+        "
+        >Get Started</b
+      >
+      <div
+        style="
+          position: absolute;
+          top: 311.38rem;
+          left: 21.38rem;
+          font-family: 'Inria Sans';
+          text-align: justify;
+          display: inline-block;
+          width: 45.06rem;
+          height: 16.63rem;
+        "
+      >
+      Ready to unlock the potential of seamless community living and elevate your society's success? It's time to supercharge your community engagement with SocietyEra and enhance the overall living experience for all residents!
+      </div>
+      <div
+        style="
+          position: absolute;
+          top: 323.13rem;
+          left: 25.44rem;
+          border-radius: 50px;
+          /*background-color: #d4d5cf;*/
+          width: 15.31rem;
+          height: 3.5rem;
+          cursor: pointer;
+        "
+        id="rectangle3"
+      ></div>
+      <div
+        style="
+          position: absolute;
+          top: 323rem;
+          left: 42.88rem;
+          border-radius: 50px;
+          /*background-color: #d4d5cf;*/
+          width: 15.31rem;
+          height: 3.5rem;
+        "
+      ></div>
+      <a href="/register">
+      <div
+        style="
+          position: absolute;
+          top: 325.5rem;
+          left: 26.31rem;
+          font-size: 1.5rem;
+          text-align: center;
+          width: 13.56rem;
+          height: 2.56rem;
+        "
+      >
+      <button id="openModalBtn">
+        Sign Up
+      </button>
+    </a>
+  <script>
+    // Get the modal
+    var modal = document.getElementById("myModal");
+    
+    // Get the button that opens the modal
+    var btn = document.getElementById("openModalBtn");
+    
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // Get the buttons inside the modal
+    var recruiterBtn = document.getElementById("recruiterBtn");
+    var studentBtn = document.getElementById("studentBtn");
+
+    // When the user clicks the button, open the modal 
+    btn.onclick = function() {
+      modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+
+    // When the user clicks outside the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+
+    // When the recruiter button is clicked, redirect to recruiter signup
+    recruiterBtn.onclick = function() {
+      window.location.href = "recregister"; // Replace with your recruiter signup page
+    }
+
+    // When the student button is clicked, redirect to student signup
+    studentBtn.onclick = function() {
+      window.location.href = "stdregister"; // Replace with your student signup page
+    }
+  
+  </script>
+</div>
+      <a href="#">
+      <div
+        style="
+          position: absolute;
+          top: 325.5rem;
+          left: 43.75rem;
+          font-size: 1.5rem;
+          text-align: center;
+          display: inline-block;
+          width: 13.56rem;
+          height: 2.56rem;
+        "
+      >
+      <button id="openModalBtn">
+        About Us
+      </button>
+        
+      </div></a>
+      <div
+        style="
+          position: absolute;
+          top: 239rem;
+          left: 3.06rem;
+          background-color: #d4d5cf;
+          width: 38.88rem;
+          height: 27.06rem;
+        "
+      ></div>
+      <div
+        style="
+          position: absolute;
+          top: 239rem;
+          left: 46.06rem;
+          background-color: #d4d5cf;
+          width: 38.88rem;
+          height: 27.06rem;
+        "
+      ></div>
+      <div
+        style="
+          position: absolute;
+          top: 242.44rem;
+          left: 7rem;
+          font-size: 3rem;
+          display: inline-block;
+          width: 28.56rem;
+          height: 21.38rem;
+          font-family: Inconsolata;
+        "
+      >
+        <p style="margin: 0">
+            A Game-Changer for Community Living!
+            ⭐️⭐️⭐️⭐️⭐️
+        </p>
+        <p style="margin: 0">
+          <b>&nbsp;</b>
+        </p>
+        <p style="margin: 0; font-family: Inder">David Thompson</p>
+      </div>
+      <div
+        style="
+          position: absolute;
+          top: 242.44rem;
+          left: 51.19rem;
+          font-size: 3rem;
+          display: inline-block;
+          width: 28.56rem;
+          height: 21.38rem;
+          font-family: Inconsolata;
+        "
+      >
+        <p style="margin: 0">
+            Empowering and User-Friendly!
+            ⭐️⭐️⭐️⭐️⭐️
+        </p>
+        <p style="margin: 0">&nbsp;</p>
+        <p style="margin: 0; font-family: Inder">Michael Collins</p>
+      </div>
+      <div
+        style="
+          position: absolute;
+          text-align: justify;
+          top: 3.94rem;
+          left: 40.44rem;
+          display: inline-block;
+          width: 50.19rem;
+          height: 12.88rem;
+        "
+      >
+      An innovative platform designed to enhance your community living experience. Empowering residents, administrators, and maintenance staff alike, SocietyEra redefines the way societies are managed.
+      </div>
+    </div>
+
+    <script>
+      var rectangle3 = document.getElementById("rectangle3");
+      if (rectangle3) {
+        rectangle3.addEventListener("click", function (e) {
+          // Please sync "Desktop - 2" to the project
+        });
+      }
+      </script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  </body>
+</html>
