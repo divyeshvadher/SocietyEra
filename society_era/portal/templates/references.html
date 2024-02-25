@@ -1,0 +1,311 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SocietyEra - References</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        .main-content {
+          background-color: #cbc7ab !important;
+        }
+        .navbar {
+          padding-top: 15px !important;
+        }
+        .search {
+            padding-left: 51%;
+        }
+        .navbar-brand {
+            color: rgb(240, 62, 62) !important;
+        }
+        .images {
+          display: flex;
+          margin: 25px;
+        }
+        .body-img1 {
+          align-items: center;
+          height: 20rem;
+          width: 30rem;
+          margin: 50px;
+          margin-right: 1rem;
+          margin-left: 0.5rem;
+          border-radius: 25px;
+          box-shadow: 8px 5px 5px rgb(138, 114, 3);
+        }
+        .body-img2 {
+          height: 20rem;
+          width: 30rem;
+          margin: 50px;
+          border-radius: 25px;
+          box-shadow: 8px 5px 5px rgb(138, 114, 3);
+        }
+        .text-head {
+          color: rgb(218, 85, 85);
+          font-size: 40px;
+          font-weight: bold;
+          padding-top: 2%;
+          align-items: center;
+          justify-content: center;
+          text-shadow: 2px 2px rgb(17, 17, 17);
+          text-decoration: underline;
+        }
+        .footer-text {
+          padding-top: 5rem;
+          font-weight: lighter;
+          font-size: 2rem;
+        }
+        .footer {
+          background-color: rgb(199, 190, 190);
+          height: 10%;
+          border: 2px  black;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          font-size: large;
+          padding: 15px;
+        }
+        .footer a {
+            text-decoration: none;
+            color: black;
+        }
+        .id-btn {
+          color: black;
+          font-size: large;
+          font-weight: bold;
+          height: 3rem;
+          width: 18rem;
+          border: none;
+          background-color: rgb(210, 228, 252);
+          box-shadow:6px 5px 5px rgb(138, 114, 3);
+        }
+        .refer-content {
+          background-color: beige;
+        }
+        .refer-content h1 {
+          color: rgb(218, 85, 85);
+          font-size: 40px;
+          font-weight: bold;
+          align-items: center;
+          justify-content: center;
+          text-shadow: 2px 2px rgb(17, 17, 17);
+          text-decoration: underline;
+        }
+        .refer-data {
+          align-items: center;
+          justify-content: center;
+          display: flex;
+          padding-bottom: 20px;
+          /* padding: 50px 50 px; */
+        }
+        .refer1 {
+          margin: 1rem;
+          font-size: larger;
+          background-color: white;
+          border-radius: 30px;
+          padding: 10px;
+          box-shadow: 10px 5px 5px rgb(166, 162, 162);
+        }
+        .refer1 p {
+          padding: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom fixed-top">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#"><u>SocietyEra</u></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/home">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="/community">Join Community</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-disabled="true" href="/services">Services</a>
+                  </li>
+                </ul>
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                <span class="login-signup" id="loginSignupContainer">
+                  {% if user.is_authenticated %}
+                      <span>Welcome, {{ user.username }}!</span>
+                  {% else %}
+                      <button class="btn btn-dark login-btn" id="loginSignupButton">
+                          <a class="nav-link active" href="/register">Login/Sign-up</a>
+                      </button>
+                  {% endif %}
+              </span>
+                </div>
+            </div>
+        </nav>
+     </div>
+     <div class="main-content">
+      <br>
+      <br>
+     <center><h1 class="text-head">"REFER TO PEOPLE WITH SIMILAR THOUGHTS"</h1></center>
+     <div class="images">
+      <img class="body-img1" src="{% static "refer.jpg" %}" alt="">
+      <img class="body-img2" src="{% static "refer1.png" %}" alt="">
+      <div>
+      <h2 class="footer-text">
+        Refer to your closed ones to connect with you and people with similar thoughts to build and grow.
+      </h2>
+      <br>
+      {% if user_reference_id %}
+          <p>Your Reference ID: {{user_reference_id}}</p>
+      {% else %}
+      <a href="/generate">
+      <button class="btn btn-dark id-btn">Generate Your reference ID</button>
+      </a>
+      {% endif %}
+    </div>
+     </div>
+    </div>
+     <div class="refer-content">
+      <center><h1>People you've referred:-</h1></center>
+      <br>
+      <div class="refer-data">
+        <div class="refer1">
+          <p>
+          Person-Name 1 <br>
+          Community: <b>The believers.</b>
+        </p>
+        </div>
+        <br>
+        <div class="refer1">
+          <p>
+          Person-Name 2 <br>
+          Community:<b>The Hive Mind.</b>
+        </p>
+        </div>
+        <br>
+        <div class="refer1">
+          <p>
+          Person-Name 3 <br>
+          Community:<b>Digital Dreamers.</b>
+        </p>
+        </div>
+      </div>
+     </div>
+     <div class="footer">
+      <h3>SocietyEra Private Limited</h3>
+      <a href="#">@Copyright</a><br>
+      <div class="footer-elements">
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      </div>
+    </div>
+
+    <script>
+      $(document).ready(function() {
+          $('#loginForm').submit(function(e) {
+              e.preventDefault();
+      
+              $.ajax({
+                  type: 'POST',
+                  url: '/login/',
+                  data: $(this).serialize(),
+                  success: function(data) {
+                      if (data.success) {
+                          $('#loginSignupContainer').html('<span>Welcome, ' + data.username + '!</span>');
+                      } else {
+                          // Handle login failure
+                          alert(data.message);
+                      }
+                  }
+              });
+          });
+      
+          $('#signupForm').submit(function(e) {
+              e.preventDefault();
+      
+              $.ajax({
+                  type: 'POST',
+                  url: '/register/',
+                  data: $(this).serialize(),
+                  success: function(data) {
+                      if (data.success) {
+                          $('#loginSignupContainer').html('<span>Welcome, ' + data.username + '!</span>');
+                      } else {
+                          // Handle signup failure
+                          alert(data.message);
+                      }
+                  }
+              });
+          });
+      });
+      </script>
+</body>
+</html>

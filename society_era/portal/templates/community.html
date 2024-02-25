@@ -1,0 +1,322 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SocietyEra - Join Community</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/qrcode@1.4.4/qrcode.min.css">
+    <style>
+        .search{
+            padding-left: 55%;
+        }
+        .body-content{
+          background-color: #cbc7ab;
+        }
+        .navbar{
+          padding-top: 15px !important;
+        }
+        .navbar-brand{
+          color: rgb(240, 62, 62) !important;
+        }
+        .body-content{
+          display: flex;
+          
+        }
+        .body-content-img{
+          margin-right: 5rem;
+          margin-left: -23rem;
+          height: 80%;
+          width: 80%;
+          padding-left: 50px;
+        }
+        /* .body-content-text{
+          
+        } */
+        .text{
+          font-size: 38px;
+          font-weight: bold;
+          padding-right: 4rem;
+          padding-top: 25% ;
+          align-items: center;
+          text-align: center;
+          justify-content: center;
+          text-shadow: 2px 2px rgb(17, 17, 17);
+          color: rgb(218, 85, 85);
+          text-decoration: underline;
+        }
+        .text1{
+          font-weight: lighter;
+          font-size: 25px;
+          padding: 5px;
+          padding-left: 2rem;
+          
+        }
+        
+        .footer{
+          background-color: rgb(199, 190, 190);
+          height: 10%;
+          border-top: 2px 2px  black;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          font-size: large;
+          padding: 15px;
+        }
+        .footer a{
+            text-decoration: none;
+            color: black;
+        }
+        .title{
+          text-align: center;
+          text-decoration: underline;
+          color: rgb(226, 92, 92);
+          text-shadow:2px 2px  rgb(124, 123, 123);
+        }
+        .data{
+          padding-top: 10px;
+          background-color:rgb(242, 218, 222);
+        }
+        .data-set{
+          display: block;
+          padding: 50px 70px;
+        }
+        .data1{
+          background-color: white;
+          border-radius: 30px;
+          padding: 10px;
+          box-shadow: 10px 5px 5px rgb(166, 162, 162);
+        }
+        .data1 h2{
+          font-size: 1.5rem;
+          font-weight: bold;
+          text-align: center;
+          color: pink;
+          text-decoration: overline;
+          text-shadow:2px 2px palevioletred;
+        }
+        .data1 p,h4{
+          font-weight: normal;
+          font-size: 1.2rem;
+        }
+        .connect-btn{
+          margin-left: 43%;
+          font-size: large;
+          align-items: center;
+          border: none;
+          background-color: rgb(242, 218, 222);
+          color: black;
+          height: 3rem !important;
+          width: 10rem !important;
+        }
+        .build-btn{
+          height: 3rem;
+          width: 15rem;
+          border: none;
+          font-size: large;
+          background-color: green;
+          box-shadow: 5px 5px 3px rgb(21, 104, 7);
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom fixed-top">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#"><u>SocietyEra</u></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/home">Home</a>
+                  </li>
+                  <!-- <li class="nav-item">
+                    <a class="nav-link active" href="community.html">Join Community</a>
+                  </li> -->
+                  <li class="nav-item">
+                    <a class="nav-link active" href="/references">References</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-disabled="true" href="/services">Services</a>
+                  </li>
+                </ul>
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                <span class="login-signup" id="loginSignupContainer">
+                  {% if user.is_authenticated %}
+                      <span>Welcome, {{ user.username }}!</span>
+                  {% else %}
+                      <button class="btn btn-dark login-btn" id="loginSignupButton">
+                          <a class="nav-link active" href="/register">Login/Sign-up</a>
+                      </button>
+                  {% endif %}
+              </span>
+                </div>
+            </div>
+        </nav>
+     </div>
+     <div class="body-content">
+      <img class="body-content-img" src="{% static "society-web-banner.webp" %}" alt="">
+      <div class="body-content-text">
+        <h1 class="text">The most seemless way to be a part of community</h1>
+        <h3 class="text1">Expand your network being part of various communities and keep growing..</h3>
+        <br>
+        <div class="build-community-form">
+          <h3>Build Your Community</h3>
+          <form method="post" action="{% url 'build_community' %}">
+              {% csrf_token %}
+              {{ community_form.as_p }}
+              <div style="padding-left: 5rem;">
+              <button type="submit" class="btn btn-dark build-btn" id="buildCommunityBtn">Build Community</button>
+            </div>
+          </form>
+      </div>
+      </div>
+     </div>
+     <div class="data">
+      <h3 class="title">Your Built Communities:</h3><br>
+        <ul>
+          {% for community in user_communities %}
+            <li>
+              <strong>{{ community.name }}</strong> - President: {{ community.president.username }}<br>
+              {{ community.description }}
+            </li>
+          {% endfor %}
+        </ul>
+     </div>
+
+     <div class="all-communities">
+       <h3>All Communities:</h3>
+       <ul>
+         {% for community in all_communities %}
+          <li>
+            <strong>{{ community.name }}</strong> = President: {{ community.president.username }}<br>
+            {{ community.description }}
+
+
+            {% if community.qr_code and community.qr_code.url %}
+            <img src="#" alt="QR Code">
+            {% endif %}
+          </li>
+         {% endfor %}
+        </ul>
+      </div>
+     <div class="footer">
+      <h3>SocietyEra Private Limited</h3>
+      <a href="#">@Copyright</a><br>
+      <div class="footer-elements">
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      </div>
+    </div>
+
+    <script>
+      $(document).ready(function() {
+          $('#loginForm').submit(function(e) {
+              e.preventDefault();
+      
+              $.ajax({
+                  type: 'POST',
+                  url: '/login/',
+                  data: $(this).serialize(),
+                  success: function(data) {
+                      if (data.success) {
+                          $('#loginSignupContainer').html('<span>Welcome, ' + data.username + '!</span>');
+                      } else {
+                          // Handle login failure
+                          alert(data.message);
+                      }
+                  }
+              });
+          });
+      
+          $('#signupForm').submit(function(e) {
+              e.preventDefault();
+      
+              $.ajax({
+                  type: 'POST',
+                  url: '/register/',
+                  data: $(this).serialize(),
+                  success: function(data) {
+                      if (data.success) {
+                          $('#loginSignupContainer').html('<span>Welcome, ' + data.username + '!</span>');
+                      } else {
+                          // Handle signup failure
+                          alert(data.message);
+                      }
+                  }
+              });
+          });
+      });
+      </script>
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/qrcode@1.4.4/qrcode.min.js"></script>
+</body>
+</html>

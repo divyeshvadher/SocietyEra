@@ -1,0 +1,124 @@
+body {
+    background-color: #eeeee8 !important;
+}
+
+.navbar {
+    padding-top: 15px !important;
+}
+
+.login-signup {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.body-img {
+    height: auto;
+    max-width: 100%; /* Make the image responsive */
+    border-radius: 10px;
+    margin: 50px 3% 50px 3%;
+}
+
+.body-content {
+    padding-top: 30px;
+    padding-left: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #dedaba;
+}
+
+.text {
+    color: rgb(218, 85, 85);
+    font-size: 50px;
+    font-weight: bold;
+    padding-top: 15%;
+    text-shadow: 2px 2px rgb(17, 17, 17);
+}
+
+.text1 {
+    font-weight: lighter;
+    font-size: 25px;
+}
+
+.navbar-brand {
+    color: rgb(240, 62, 62) !important;
+}
+
+.login-btn {
+    background-color: rgb(121, 144, 53) !important;
+    border: none !important;
+    margin-left: 80px;
+}
+
+.end-content-img {
+    height: auto;
+    max-width: 100%; /* Make the image responsive */
+    border-radius: 10px;
+    margin: 70px 3% 70px 3%;
+}
+
+.end-content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.end-text {
+    color: rgb(227, 96, 96);
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 25%;
+    text-shadow: 2px 1px rgb(245, 164, 164);
+    text-decoration: underline;
+    padding-left: 15px;
+}
+
+.points {
+    font-weight: 200;
+    font-size: 20px;
+    text-align: center;
+    flex: 1 0 100%; /* Make the points items stack on smaller screens */
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+.points1 {
+    font-weight: 400;
+    font-size: larger;
+    text-align: center;
+    flex: 1 0 100%; /* Make the points1 item stack on smaller screens */
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+.end-title {
+    background-color: white !important;
+    height: 12rem;
+    padding: 2.5rem;
+}
+
+.end-title1 {
+    text-align: center;
+    color: rgb(227, 96, 96);
+    text-shadow: 2px 1px rgb(19, 18, 19);
+}
+
+.end-title2 {
+    text-align: center;
+    font-weight: lighter;
+    font-size: 2rem;
+    color: darkmagenta;
+}
+
+.footer {
+    background-color: rgb(199, 190, 190);
+    height: auto;
+    border: 2px black;
+    text-align: center;
+    font-size: large;
+    padding: 15px;
+}
+
+.footer a {
+    text-decoration: none;
+    color: black;
+}
