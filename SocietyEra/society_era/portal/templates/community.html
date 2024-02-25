@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SocietyEra - Join Community</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/qrcode@1.4.4/qrcode.min.css">
     <style>
         .search{
             padding-left: 55%;
@@ -121,7 +122,7 @@
 </head>
 <body>
     <div class="main">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom sticky-top">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom fixed-top">
             <div class="container-fluid">
               <a class="navbar-brand" href="#"><u>SocietyEra</u></a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -136,16 +137,88 @@
                     <a class="nav-link active" href="community.html">Join Community</a>
                   </li> -->
                   <li class="nav-item">
-                    <a class="nav-link active" href="/references">Refrences</a>
+                    <a class="nav-link active" href="/references">References</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link active" aria-disabled="true" href="/services">Services</a>
                   </li>
                 </ul>
-                <form class="d-flex search" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                  </form>
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                <span class="login-signup" id="loginSignupContainer">
+                  {% if user.is_authenticated %}
+                      <span>Welcome, {{ user.username }}!</span>
+                  {% else %}
+                      <button class="btn btn-dark login-btn" id="loginSignupButton">
+                          <a class="nav-link active" href="/register">Login/Sign-up</a>
+                      </button>
+                  {% endif %}
+              </span>
                 </div>
             </div>
         </nav>
@@ -156,42 +229,46 @@
         <h1 class="text">The most seemless way to be a part of community</h1>
         <h3 class="text1">Expand your network being part of various communities and keep growing..</h3>
         <br>
-        <div style="padding-left: 5rem;">
-        <button class="btn btn-dark build-btn">Build your Community</button>
+        <div class="build-community-form">
+          <h3>Build Your Community</h3>
+          <form method="post" action="{% url 'build_community' %}">
+              {% csrf_token %}
+              {{ community_form.as_p }}
+              <div style="padding-left: 5rem;">
+              <button type="submit" class="btn btn-dark build-btn" id="buildCommunityBtn">Build Community</button>
+            </div>
+          </form>
       </div>
       </div>
      </div>
      <div class="data">
-      <h1 class="title">Communities in range of your location:</h1><br>
-      <div class="data-set">
-        <div class="data1">
-          <h2>The believers</h2>
-          <h4> <b>DESCRIPTION:</b>
-            <p>"The Believers" is a community that finds strength, inspiration, and connection through shared beliefs and values. Imagine a space where shared beliefs become a unifying force, fostering a sense of belonging and purpose.</p></h4>
-          <h4><b>PRESIDENT:</b> Om Soni</h4>
-          <h4>Contact me at "om890@gmail.com".</h4>
-          <button class="btn btn-dark connect-btn">Connect</button>
-        </div>
-        <br>
-        <div class="data1">
-          <h2>The Hive Mind</h2>
-          <h4><b>DESCRIPTION:</b>
-            <p>"The Hive Mind" is a vibrant and interconnected community that thrives on collective intelligence and collaboration. Imagine a virtual hive where diverse minds converge, contributing their unique perspectives and expertise to create a rich tapestry of insights.</p></h4>
-          <h4><b>PRESIDENT:</b> Harshit Soni</h4>
-          <h4>Contact me at "harshit45@gmail.com".</h4>
-          <button class="btn btn-dark connect-btn">Connect</button>
-        </div>
-        <br>
-        <div class="data1">
-          <h2>Digital Dreamers</h2>
-          <h4><b>DESCRIPTION:</b>
-            <p>"Digital Dreamers" is an innovative and forward-thinking community that serves as a melting pot for individuals passionate about harnessing the potential of the digital realm.</p></h4>
-          <h4><b>PRESIDENT:</b> Hardik Soni</h4>
-          <h4>Contact me at "hardik89@gmail.com".</h4>
-          <button class="btn btn-dark connect-btn">Connect</button>
-        </div>
-      </div> 
+      <h3 class="title">Your Built Communities:</h3><br>
+        <ul>
+          {% for community in user_communities %}
+            <li>
+              <strong>{{ community.name }}</strong> - President: {{ community.president.username }}<br>
+              {{ community.description }}
+            </li>
+          {% endfor %}
+        </ul>
      </div>
+
+     <div class="all-communities">
+       <h3>All Communities:</h3>
+       <ul>
+         {% for community in all_communities %}
+          <li>
+            <strong>{{ community.name }}</strong> = President: {{ community.president.username }}<br>
+            {{ community.description }}
+
+
+            {% if community.qr_code and community.qr_code.url %}
+            <img src="#" alt="QR Code">
+            {% endif %}
+          </li>
+         {% endfor %}
+        </ul>
+      </div>
      <div class="footer">
       <h3>SocietyEra Private Limited</h3>
       <a href="#">@Copyright</a><br>
@@ -200,5 +277,46 @@
       <a href="#">Terms</a>
       </div>
     </div>
+
+    <script>
+      $(document).ready(function() {
+          $('#loginForm').submit(function(e) {
+              e.preventDefault();
+      
+              $.ajax({
+                  type: 'POST',
+                  url: '/login/',
+                  data: $(this).serialize(),
+                  success: function(data) {
+                      if (data.success) {
+                          $('#loginSignupContainer').html('<span>Welcome, ' + data.username + '!</span>');
+                      } else {
+                          // Handle login failure
+                          alert(data.message);
+                      }
+                  }
+              });
+          });
+      
+          $('#signupForm').submit(function(e) {
+              e.preventDefault();
+      
+              $.ajax({
+                  type: 'POST',
+                  url: '/register/',
+                  data: $(this).serialize(),
+                  success: function(data) {
+                      if (data.success) {
+                          $('#loginSignupContainer').html('<span>Welcome, ' + data.username + '!</span>');
+                      } else {
+                          // Handle signup failure
+                          alert(data.message);
+                      }
+                  }
+              });
+          });
+      });
+      </script>
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/qrcode@1.4.4/qrcode.min.js"></script>
 </body>
 </html>
