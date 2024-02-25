@@ -117,7 +117,7 @@
 </head>
 <body>
     <div class="main">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom fixed-top">
             <div class="container-fluid">
               <a class="navbar-brand" href="#"><u>SocietyEra</u></a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -132,16 +132,88 @@
                     <a class="nav-link active" href="/community">Join Community</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link active" href="/references">Refrences</a>
+                    <a class="nav-link active" href="/references">References</a>
                   </li>
                   <!-- <li class="nav-item">
                     <a class="nav-link active" aria-disabled="true">Services</a>
                   </li> -->
                 </ul>
-                <form class="d-flex search" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                  </form>
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                <span class="login-signup" id="loginSignupContainer">
+                  {% if user.is_authenticated %}
+                      <span>Welcome, {{ user.username }}!</span>
+                  {% else %}
+                      <button class="btn btn-dark login-btn" id="loginSignupButton">
+                          <a class="nav-link active" href="/register">Login/Sign-up</a>
+                      </button>
+                  {% endif %}
+              </span>
                 </div>
             </div>
         </nav>
@@ -199,5 +271,45 @@
       </div>
     </div>
      
+
+    <script>
+      $(document).ready(function() {
+          $('#loginForm').submit(function(e) {
+              e.preventDefault();
+      
+              $.ajax({
+                  type: 'POST',
+                  url: '/login/',
+                  data: $(this).serialize(),
+                  success: function(data) {
+                      if (data.success) {
+                          $('#loginSignupContainer').html('<span>Welcome, ' + data.username + '!</span>');
+                      } else {
+                          // Handle login failure
+                          alert(data.message);
+                      }
+                  }
+              });
+          });
+      
+          $('#signupForm').submit(function(e) {
+              e.preventDefault();
+      
+              $.ajax({
+                  type: 'POST',
+                  url: '/register/',
+                  data: $(this).serialize(),
+                  success: function(data) {
+                      if (data.success) {
+                          $('#loginSignupContainer').html('<span>Welcome, ' + data.username + '!</span>');
+                      } else {
+                          // Handle signup failure
+                          alert(data.message);
+                      }
+                  }
+              });
+          });
+      });
+      </script>
 </body>
 </html>
