@@ -252,23 +252,36 @@
           {% endfor %}
         </ul>
      </div>
-
+     
      <div class="all-communities">
-       <h3>All Communities:</h3>
-       <ul>
-         {% for community in all_communities %}
+      <h3>All Communities:</h3>
+      <ul>
+          {% for community in all_communities %}
           <li>
-            <strong>{{ community.name }}</strong> = President: {{ community.president.username }}<br>
-            {{ community.description }}
-
-
-            {% if community.qr_code and community.qr_code.url %}
-            <img src="#" alt="QR Code">
-            {% endif %}
+              <strong>{{ community.name }}</strong> = President: {{ community.president.username }}<br>
+              {{ community.description }}
+  
+              {% if community.president != request.user %}
+                  {% if community.reference_id.count == 0 %}
+                      <p>No reference id available for this community.</p>
+                  {% else %}
+                      {% if community.is_user_member %}
+                          <button type="button">Connect Community Members</button>
+                      {% else %}
+                          <form method="post" action="{% url 'community' %}">
+                              {% csrf_token %}
+                              <label for="reference_id">Enter Reference ID to join:</label>
+                              <input type="text" name="reference_id" required>
+                              <button type="submit">Join Community</button>
+                          </form>
+                      {% endif %}
+                  {% endif %}
+              {% endif %}
           </li>
-         {% endfor %}
-        </ul>
-      </div>
+          {% endfor %}
+      </ul>
+  </div>
+  
      <div class="footer">
       <h3>SocietyEra Private Limited</h3>
       <a href="#">@Copyright</a><br>
