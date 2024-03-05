@@ -1,3 +1,4 @@
+from email import message
 import os
 from django.conf import settings
 import uuid
@@ -11,6 +12,7 @@ from django.http import JsonResponse
 from .models import reference_id, Community
 from django.contrib.auth.models import User
 import random
+from django.shortcuts import get_object_or_404
 
 @login_required(login_url='/login')
 def community(request):
@@ -42,10 +44,28 @@ def build_community(request):
         form = CommunityForm()
 
     return render(request, 'community.html', {'community_form': form})
+
+@login_required(login_url='/login')
+def join_community(request, community_id):
+    if request.method == 'POST':
+        reference_id_value = request.POST.get('reference_id')
+        community = get_object_or_404(Community, id=community_id)
+        user_reference_instance = get_object_or_404(reference_id, user=request.user, reference_id=reference_id_value, community=None)
+
+        if user_reference_instance.user == request.user.username:
+            user_reference_instance.community = community
+            user_reference_instance.save()
+            messages.success(request, f'You have joined the {community.name} community!')
+            community.is_user_member = True
+            community.save()
+        else:
+            messages.error(request, 'Invalid Reference ID. Please Try Again.')
+        return JsonResponse({'is_user_member': community.is_user_member})
+    return redirect('community')    
 def references(request):
     user_reference_id = None
     
-    # Assuming you have a reference model and the user is authenticated
+    
     if request.user.is_authenticated:
         try:
             user_reference_instance = reference_id.objects.get(user=request.user)
@@ -64,11 +84,17 @@ def GenerateRefID(request):
     if request.method == 'POST':
         form = ReferenceId(request.POST)
         if form.is_valid():
-            reference_id_instance = form.save()            
+            reference_id_instance = form.save(commit=False)
+            community_id = request.POST.get('community_id')
+            if community_id:
+                community = Community.objects.get(id=community_id)
+                reference_id_instance.community = community
+            reference_id_instance.user = request.user    
+            reference_id_instance.save()            
             reference_id_number = reference_id_instance.reference_id
+            messages.success(request, 'Reference ID generated successfully!')
+            return redirect('community')
             
-        else:
-            pass
         
     else:
         form = ReferenceId()
@@ -79,7 +105,7 @@ def HomePage(request):
 
 def Register(request):
     form = CreateUserForm()
-    
+    context={}
     if request.method == 'POST':
         form = CreateUserForm(request.POST)
         if form.is_valid():
