@@ -13,13 +13,17 @@
 			margin: 0;
 			padding: 0;
 			height: 100%;
-			background: #a0c67c !important;
+			background-image: url("../static/signupbackimg.jpg");
+			background-repeat: no-repeat;
+			background-size: cover;
 		}
 		.user_card {
+			
 			width: 350px;
+			margin-left: 45rem;
 			margin-top: auto;
 			margin-bottom: auto;
-			background: #7b8c59;
+			background: transparent;
 			position: relative;
 			display: flex;
 			justify-content: center;
@@ -32,7 +36,10 @@
 
 		}
 		a {
-			color: #f8f9fa;
+			padding-bottom: 12px;
+			font-weight: bolder;
+			font-size: larger;
+			color: #2600a3;
 			text-decoration: none;
 			background-color: transparent;
 			-webkit-text-decoration-skip: objects;
@@ -43,7 +50,10 @@
 		}
 
 		#form-title{
-			color: #fff;
+			font-style: italic;
+			text-decoration: underline;
+			color: #000000;
+			text-shadow:2px 2px 2px #949292;
 		}
 		.login_btn {
 			width: 100%;
@@ -117,7 +127,7 @@
                 {{form.errors}}
 				<div class="mt-4">
 					<div class="d-flex justify-content-center links">
-						Already have an account? <a href="{% url 'login' %}" class="ml-2">Login</a>
+						Already have an account? <a style="padding-bottom: 12px;" href="{% url 'login' %}" class="ml-2">Login</a>
 					</div>
 				</div>
 			</div>
